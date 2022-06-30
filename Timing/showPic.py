@@ -7,7 +7,7 @@ minute = 60
 def show_pic():
     now = time.localtime()
     while True:
-        if(now.tm_min in range(0,10)):
+        if(now.tm_min in range(0,6)):
             img_path = r"preview.jpg"
             img = plt.imread(img_path)
             plt.figure("站一站")
