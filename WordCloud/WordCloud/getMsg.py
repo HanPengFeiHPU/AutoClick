@@ -91,7 +91,7 @@ def word_cloud():
 
 
 if __name__ == '__main__':
-    url = 'https://live.baidu.com/m/media/pclive/pchome/live.html?room_id=4698583659'
+    url = 'https://live.baidu.com/m/media/pclive/pchome/live.html?room_id=4701465267'
     get_msg(url=url, hour=2)
     # pre_file()
     # word_cloud()
