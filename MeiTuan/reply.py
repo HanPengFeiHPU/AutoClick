@@ -17,7 +17,7 @@ def login_cookie():
         driver.get("https://g.dianping.com/app/gfe-common-pc-im-merchant/index.html#/")
         time.sleep(1)
         # 点击否
-        driver.find_element_by_xpath("/html/body/div[2]/div/div[3]/button[1]").click()
+        driver.find_element(By.XPATH,"/html/body/div[2]/div/div[3]/button[1]").click()
 
         # 检测列表中新消息
         num = 1
@@ -33,17 +33,17 @@ def login_cookie():
                     #     # 点击否
                     #     driver.find_element_by_xpath("/html/body/div[2]/div/div[3]/button[1]").click()
 
-                    driver.find_element_by_xpath(
+                    driver.find_element(By.XPATH,
                         "/html/body/div[1]/div/div[2]/div/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[5]").click()
 
-                    is_new = driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[{0}]/span".format(str(i)))
+                    is_new = driver.find_element(By.XPATH,"/html/body/div[1]/div/div[2]/div/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[{0}]/span".format(str(i)))
                     # is_new = driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[{0}]".format(str(i)))
                     is_new.click()
-                    input_text = driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div[1]/div[3]/div[4]/div/div[2]/pre")
+                    input_text = driver.find_element(By.XPATH,"/html/body/div[1]/div/div[2]/div/div[1]/div[3]/div[4]/div/div[2]/pre")
                     input_text.click()
                     input_text.send_keys("VX公众号At You Studyroom可自主选套餐、选座、选时间，欢迎体验！")
 
-                    driver.find_element_by_class_name("send-button").click()
+                    driver.find_element(By.CLASS_NAME,"send-button").click()
 
                     # isContinue = input("是否继续：")
                 except Exception as ex:
